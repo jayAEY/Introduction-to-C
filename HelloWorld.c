@@ -139,26 +139,163 @@
 //   return 0;
 // }
 
-// 58.04
+// TIME :58.04
 
-#include <stdio.h>
+// // function for returning circumference
+// #include <stdio.h>
+// int main() {
 
-// function for returning circumference
-int main() {
+//   const double PI = 3.14159;
+//   double radius;
+//   double circumference;
+//   double area;
 
-  const double PI = 3.14159;
-  double radius;
-  double circumference;
-  double area;
+//   printf("\nEnter the radius of a circle: ");
+//   scanf("%lf", &radius);
 
-  printf("\nEnter the radius of a circle: ");
-  scanf("%lf", &radius);
+//   circumference = 2 * PI * radius;
+//   area = PI * radius * radius;
 
-  circumference = 2 * PI * radius;
-  area = PI * radius * radius;
+//   printf("\ncircumference: %lf", circumference);
+//   printf("\narea: %lf", area);
 
-  printf("\ncircumference: %lf", circumference);
-  printf("\narea: %lf", area);
+//   return 0;
+// }
 
-  return 0;
-}
+// // function for returning hypotenuse
+// #include <math.h>
+// #include <stdio.h>
+
+// int main() {
+//   double A;
+//   double B;
+//   double C;
+
+//   printf("Enter side A:");
+//   scanf("%lf", &A);
+
+//   printf("Enter side B:");
+//   scanf("%lf", &B);
+
+//   C = sqrt(A * A + B * B);
+
+//   printf("Side C: %lf", C);
+
+//   return 0;
+// }
+
+// #include <stdio.h>
+// int main() {
+// // if example
+// int age;
+// printf("\nEnter your age: ");
+// scanf("%d", &age);
+
+// if (age >= 18) {
+//   printf("You are now signed up!");
+// } else if (age < 0) {
+//   printf("You haven't been born yet!");
+// } else if (age == 0) {
+//   printf("You were just born!");
+// } else {
+//   printf("You are too young to sign up!");
+// }
+// return 0;
+
+//   // switch statement example
+//   char grade;
+//   printf("\n Enter a letter grade: ");
+//   scanf("%c", &grade);
+
+//   switch (grade) {
+//   case 'A': // NOTE single commas are needed
+//     printf("Perfect!\n");
+//     break;
+//   case 'B':
+//     printf("You did good!\n");
+//     break;
+//   case 'C':
+//     printf("You did okay!\n");
+//     break;
+//   case 'D':
+//     printf("At least it's not an F!\n");
+//     break;
+//   case 'F':
+//     printf("YOU FAILED!\n");
+//     break;
+//   default:
+//     printf("Please enter only valid grades");
+//   }
+//   return 0;
+// }
+
+// // temperature conversion
+// #include <ctype.h> //for string functions
+// #include <stdio.h>
+
+// int main() {
+//   char unit;
+//   float temp;
+
+//   printf("\nIs the temperature in (F) or (C)?");
+//   scanf("%c", &unit);
+
+//   unit = toupper(unit); // to take into account lower case
+
+//   if (unit == 'C') {
+//     printf("\nEnter the temp in Celsius: ");
+//     scanf("%f", &temp);
+//     temp = (temp * 9 / 5) + 32;
+//     printf("The temp in Farenheit is %.1f", temp);
+//   } else if (unit == 'F') {
+//     printf("\nEnter the temp in Farenheit: ");
+//     scanf("%f", &temp);
+//     temp = ((temp - 32) * 5) / 9;
+//     printf("The temp in Celsius is %.1f", temp);
+//   } else {
+//     printf("\n%cis not valid!", unit);
+//   }
+
+//   return 0;
+// }
+
+// // simple calculator
+// #include <stdio.h>
+
+// int main() {
+//   char operator;
+//   double num1;
+//   double num2;
+//   double result;
+
+//   printf("\n Enter an operator (+ - * /): ");
+//   scanf("%c", &operator);
+
+//   printf("\nEnter the first number: ", num1);
+//   scanf("%lf", &num1);
+
+//   printf("\nEnter the second number: ", num2);
+//   scanf("%lf", &num2);
+
+//   switch (operator) {
+//   case '+':
+//     result = num1 + num2;
+//     printf("\nresult: %.2lf", result);
+//     break;
+//   case '-':
+//     result = num1 - num2;
+//     printf("\nresult: %.2lf", result);
+//     break;
+//   case '/':
+//     result = num1 / num2;
+//     printf("\nresult: %.2lf", result);
+//     break;
+//   case '*':
+//     result = num1 * num2;
+//     printf("\nresult: %.2lf", result);
+//     break;
+//   default:
+//     printf("\n%c is not valid", operator);
+//   }
+//   return 0;
+// }
