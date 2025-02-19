@@ -797,14 +797,39 @@
 //   return 0;
 // }
 
-// number guessing game
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+// // number guessing game
+// #include <stdio.h>
+// #include <stdlib.h>
+// #include <time.h>
 
-int main() {
+// int main() {
+//   const int MIN = 1;
+//   const int MAX = 100;
+//   int guess;
+//   int guesses;
+//   int answer;
 
-  // printf("%d\n", number3);
+//   // creates seed with current time
+//   srand(time(0));
+//   // generates random number between MIN & MAX
+//   answer = (rand() % MAX) + MIN;
 
-  return 0;
-}
+//   do {
+//     printf("Enter a guess: ");
+//     scanf("%d", &guess);
+//     if (guess > answer) {
+//       printf("Too high\n");
+//     } else if (guess < answer) {
+//       printf("too low\n");
+//     } else {
+//       printf("CORRECT\n");
+//     }
+//     guesses++;
+//   } while (guess != answer);
+//   printf("**********\n");
+//   printf("answer: %-15d\n", answer);
+//   printf("guesses: %-15d\n", guesses);
+//   printf("**********\n");
+
+//   return 0;
+// }
