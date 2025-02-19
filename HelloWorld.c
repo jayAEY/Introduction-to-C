@@ -299,3 +299,512 @@
 //   }
 //   return 0;
 // }
+
+// #include <stdbool.h> // needed for booleans
+// #include <stdio.h>
+
+// int main() {
+//   // logical operators
+//   float temp = 16;
+//   bool sunny = 1;
+
+//   if ((temp >= 0 && temp <= 30 && sunny && temp != 16) ||
+//       temp == 69) { // note var name, name == true and name = 1 are all true
+//     printf("\nThe weather is good");
+//   } else {
+//     printf("\nThe weather is bad");
+//   }
+
+//   return 0;
+// }
+
+// // functions, args and parameters
+// #include <stdio.h>
+// void birthday(char name[], int age) {
+//   // printf("!\nHappy Birthday to you");
+//   // printf("!\nHappy Birthday to you");
+//   // printf("!\nHappy Birthday dear ..... YOU!");
+//   // printf("!\nHappy Birthday to you\n");
+//   printf("\nHappy birthday dear %s!", name);
+//   printf("\nYou are %d years old", age);
+// }
+
+// int main() {
+//   char name[] = "Ren";
+//   int age = 17;
+
+//   birthday(name, age);
+
+//   return 0;
+// }
+
+// // return statement
+// #include <stdio.h>
+// double square(double x) {
+//   // double result = x * x;
+//   // return result;
+//   return x * x; // be sure to return same type as function
+// }
+
+// int main() {
+
+//   double x = square(8);
+//   printf("%lf", x);
+
+//   return 0;
+// }
+
+// ternary operator
+// #include <stdio.h>
+// int findMax(int x, int y) { return (x > y) ? x : y; }
+
+// int main() {
+//   int max = findMax(10, 4);
+
+//   printf("%d", max);
+//   return 0;
+// }
+
+// function prototype - function declaration without body
+// ensures calls are made with correct arguments
+// #include <stdio.h>
+
+// void hello(char[], int);
+
+// int main() {
+//   char name[] = "Bro";
+//   int age = 21;
+
+//   hello(name, age);
+
+//   return 0;
+// };
+
+// void hello(char name[], int age) {
+//   printf("\nHello %s", name);
+//   printf("\nYou are %d years old", age);
+// };
+
+// string functions
+// #include <stdio.h>
+// #include <string.h>
+
+// int main() {
+//   char string1[] = "Bro";
+//   char string2[] = "Code";
+
+//   // strlwr(string1);
+//   // strupr(string1);
+//   // strcat(string1, string2);
+//   // strncat(string1, string2, 2); //appends n characters from 2 to 1
+//   // strcpy(string1, string2); //replaces 1 with 2
+//   // strncpy(string1, string2, 1); // replaces n letters in 1 with 2
+
+//   // strset(string1, '?');     // sets all characters to given character
+//   // strnset(string1, '?', 2); // sets first n characters to given character
+//   // strrev(string1);
+
+//   // int result = strlen(string1); // returns strlength as int
+//   // int result = strcmp(string1, string2); // compares all characters
+//   // int result = strncmp(string1, string2, 1); // compares n characters
+//   int result = strcmpi(string1, string2); // compares all ignoring case
+//   // int result = strnicmp(string1, string2, 1); // compares all n ignoring
+//   case
+
+//   // printf("\n%s", string1);
+//   // printf("\n%d", result);
+//   printf("\n%d", result); // 0 = true
+
+//   return 0;
+// };
+
+// // for loop
+// #include <stdio.h>
+
+// int main() {
+//   for (int i = 1; i >= -100; i -= 20) {
+//     printf("%d\n", i);
+//   }
+
+//   return 0;
+// }
+
+// // while loop
+// #include <stdio.h>
+// #include <string.h>
+
+// int main() {
+//   char name[25];
+
+//   printf("\nWhat's your name?: ");
+//   fgets(name, 25, stdin);        // scanf stops at white spaces
+//   name[strlen(name) - 1] = '\0'; // gets rid of new line at end of input
+
+//   while (strlen(name) == 0) {
+//     printf("\nYou didn't enter your name");
+//     printf("\nWhat's your name?: ");
+//     fgets(name, 25, stdin); // scanf stops at white spaces
+//     name[strlen(name) - 1] = '\0';
+//   }
+
+//   printf("hello %s", name);
+
+//   return 0;
+// }
+
+// // dowhile loop
+// // always executes once then checks condition
+// // while checks condition then executes if condition is true
+// #include <stdio.h>
+// int main() {
+//   int number = 0;
+//   int sum = 0;
+
+//   // while (number > 0) {
+//   //   // will not execute because condition is false
+//   //   printf("Enter a # above 0 : \n");
+//   //   scanf("%d", &number);
+//   //   if (number > 0) {
+//   //     sum += number;
+//   //   }
+//   // }
+//   do {
+//     printf("Enter a # above 0 : \n");
+//     scanf("%d", &number);
+//     if (number > 0) {
+//       sum += number;
+//     }
+//   } while (number > 0);
+
+//   printf("sum: %d", sum);
+
+//   return 0;
+// }
+
+// nested loops
+// #include <stdio.h>
+// int main() {
+
+//   int rows;
+//   int columns;
+//   char symbol;
+
+//   printf("\nEnter # of rows: ");
+//   scanf("%d", &rows);
+//   printf("\nEnter # of columns: ");
+//   scanf("%d", &columns);
+//   // scanf("%c"); // should prevent extra \n's after last scan f but doesent
+//   // work
+//   // getchar(); // prevents extra \n's after last scan f
+
+//   printf("\nEnter a symbol to use: ");
+//   scanf("\n%c", &symbol); //\n is needed here
+
+//   for (int i = 1; i <= rows; i++) {
+//     for (int j = 1; j <= columns; j++) {
+//       printf("%c", symbol);
+//     };
+//     printf("\n");
+//   };
+
+//   return 0;
+// }
+
+// // continue vs break
+// #include <stdio.h>
+// int main() {
+//   // continue skips and forces next part loop
+//   // break exits loop/switch
+
+//   for (int i = 1; i <= 20; i++) {
+//     if (i == 13) {
+//       continue;
+//       // break;
+//     }
+//     printf("%d\n", i);
+//   }
+
+//   return 0;
+// }
+
+// // arrays
+// #include <stdio.h>
+// int main() {
+//   double prices[] = {5.0, 2.0, 15, 150.23, 25.0, 123, 123,
+//                      3,   4,   23, 53,     3.22, 222};
+
+//   double newPrices[10]; // sets size without values
+//   newPrices[2] = 3;
+
+//   char name[] = "bro"; // strings are arrays of characters
+
+//   // printf("$%lf\n$%.2lf\n$%.1lf", prices[2], prices[0], prices[4]);
+//   // printf("$%.2lf\n", newPrices[1]);
+
+//   printf("%d bytes\n",
+//          sizeof(prices)); // gives size in bytes -each double is 8 bytes
+
+//   // i < sizeof(prices) / sizeof(prices[0]) is the c equivalent for
+//   arr.length() for (int i = 0; i < sizeof(prices) / sizeof(prices[0]); i++) {
+//     printf("$%.2lf\n", prices[i]);
+//   }
+
+//   return 0;
+// }
+
+// 2d arrays
+// #include <stdio.h>
+// int main() {
+
+//   // int numbers[2][3] = {{1, 2, 3},
+//   //                      {4, 5, 6}}; // 2d arrays need a max size defined
+//   [max
+//   //                      #
+//   //                                  // of arrays][max # of elements in each
+//   //                                  arr]
+
+//   // alternate way of initializing array
+//   int numbers[3][3];
+
+//   int rows = sizeof(numbers) / sizeof(numbers[0]); // numbers[0] is the first
+//                                                    // row
+//   int columns = sizeof(numbers[0]) /
+//                 sizeof(numbers[0][0]); // numbers[0][0] is 1 element in the
+//                 row
+
+//   // printf("rows:%d\ncolumns:%d\n", rows, columns);
+
+//   numbers[0][0] = 1; //[row][columns]
+//   numbers[0][1] = 2;
+//   numbers[0][2] = 3;
+//   numbers[1][0] = 4;
+//   numbers[1][1] = 5;
+//   numbers[1][2] = 6;
+//   numbers[2][0] = 7;
+//   numbers[2][1] = 8;
+//   numbers[2][2] = 9;
+
+//   for (int i = 0; i < rows; i++) {
+//     for (int j = 0; j < columns; j++) {
+//       printf("%d ", numbers[i][j]);
+//     }
+//     printf("\n");
+//   };
+
+//   return 0;
+// }
+
+// // string arrays (2d arrays of characters)
+// #include <stdio.h>
+// #include <string.h>
+
+// int main() {
+
+//   char cars[][2] = {"Mustang", "Corvette",
+//                     "Camaro"}; // Note elements are over limit of 2
+//   // NOTE you can't change values withcars[0] = "Tesla"; wont work
+//   strcpy(cars[0], "Tesla");
+
+//   for (int i = 0; i < sizeof(cars) / sizeof(cars[0]); i++) {
+//     printf("%s\n", cars[i]);
+//   };
+
+//   return 0;
+// }
+
+// // swap values of variables
+// #include <stdio.h>
+// #include <string.h>
+
+// int main() {
+//   // // individual chars
+//   // char x = 'X';
+//   // char y = 'Y';
+//   // char temp;
+
+//   // temp = x;
+//   // x = y;
+//   // y = temp;
+
+//   char x[] = "water";
+//   char y[] = "lemonade";
+//   char temp[15];
+
+//   strcpy(temp, x);
+//   strcpy(x, y); // note there will be problems if dest array is shorter
+//   strcpy(temp, x);
+
+//   // printf("x = %c\n", x);
+//   // printf("y = %c\n", y);
+
+//   printf("x = %s\n", x);
+//   printf("y = %s\n", y);
+
+//   return 0;
+// }
+
+// // sort arr (bubble sort)
+// #include <stdio.h>
+// #include <string.h>
+
+// // void returns nothing
+// void sort(int array[], int size) {
+//   for (int i = 0; i < size - 1; i++) {
+//     for (int j = 0; j < size - i - 1; j++) {
+//       if (array[j] > array[j + 1]) {
+//         // if (array[j] < array[j + 1]) { for reverse order
+//         int temp = array[j];
+//         array[j] = array[j + 1];
+//         array[j + 1] = temp;
+//       }
+//     }
+//   }
+// }
+
+// void printArray(int array[], int size) {
+//   for (int i = 0; i < size; i++) {
+//     printf("%d", array[i]);
+//   }
+// }
+
+// int main() {
+
+//   int array[] = {1, 9, 6, 3, 8, 5, 2, 5, 6};
+//   int size = sizeof(array) / sizeof(array[0]);
+
+//   sort(array, size);
+//   printArray(array, size);
+
+//   return 0;
+// }
+
+// // structs (similar to classes but no methods)
+// #include <stdio.h>
+// #include <string.h>
+
+// struct Player {
+//   char name[12];
+//   int score;
+// };
+
+// int main() {
+
+//   struct Player player1;
+//   struct Player player2;
+
+//   strcpy(player1.name, "Bro"); // strcpy needed for strings
+//   player1.score = 23;
+
+//   strcpy(player2.name, "Code");
+//   player2.score = 13;
+
+//   printf("%s\n", player1.name);
+//   printf("%d\n", player1.score);
+
+//   printf("%s\n", player2.name);
+//   printf("%d\n", player2.score);
+
+//   return 0;
+// }
+
+// typedef - gives datatype a "nickname"
+// #include <stdio.h>
+// #include <string.h>
+
+// // typedef char user[25]; // so you dont have to type char user1[25] multiple
+// // times
+
+// // struct typedef
+// typedef struct {
+//   char name[25];
+//   char password[12];
+//   int id;
+// } User;
+
+// int main() {
+//   // user user1 = "Bro";
+
+//   User user1 = {"Bro", "password123", 1234857};
+//   User user2 = {"sdfsdf", "password123", 1234851237};
+
+//   printf("%s\n", user1.name);
+//   printf("%s\n", user1.password);
+//   printf("%d\n", user1.id);
+
+//   return 0;
+// }
+
+// // array of structs
+// #include <stdio.h>
+// #include <string.h>
+
+// struct Student {
+//   char name[12];
+//   float gpa;
+// };
+
+// int main() {
+//   struct Student student1 = {"Spongebob", 3.0};
+//   struct Student student2 = {"Sandy", 2.0};
+//   struct Student student3 = {"Squidward", 1.0};
+//   struct Student student4 = {"Patrick", 4.0};
+
+//   struct Student students[] = {student1, student2, student3, student4};
+//   for (int i = 0; i < sizeof(students) / sizeof(students[0]); i++) {
+//     printf("%-20s\t", students[i].name); //\t is a tab
+//     printf("%.2f\n", students[i].gpa);
+//   }
+
+//   return 0;
+// }
+
+// // enums user defined type of named integer identifiers
+// #include <stdio.h>
+
+// // enum Day { Sun, Mon, Tue, Wed, Thu, Fri, Sat }; // enums are constants. By
+// // default starts at 0
+// enum Day { Sun = 1, Mon = 2, Tue = 3, Wed = 4, Thu = 5, Fri = 6, Sat = 7 };
+// int main() {
+//   enum Day today = Mon; // note enums are ints
+
+//   if (today == Sun || today == Sat) {
+//     printf("No work today!");
+//   } else {
+//     printf("time to work!");
+//   }
+
+//   // printf("%d", today);
+
+//   return 0;
+// }
+
+// // pseudo random numbers (statistically random)
+// #include <stdio.h>
+// #include <stdlib.h>
+// #include <time.h>
+
+// int main() {
+//   srand(time(0)); // numbers will always be the same if you don't use seed
+//   // time(0) is current time
+//   int number1 = (rand() % 6) + 1; // 6 is the max number
+//   int number2 = (rand() % 6) + 1;
+//   int number3 = (rand() % 6) + 1;
+
+//   printf("%d\n", number1);
+//   printf("%d\n", number2);
+//   printf("%d\n", number3);
+
+//   return 0;
+// }
+
+// number guessing game
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+
+  // printf("%d\n", number3);
+
+  return 0;
+}
